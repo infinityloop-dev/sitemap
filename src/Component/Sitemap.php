@@ -22,10 +22,10 @@ final class Sitemap extends BaseComponent
     /** @var \Nette\Caching\Cache */
     private $cache;
 
-    public function __construct(\Nette\DI\Container $context, \Kdyby\Redis\RedisStorage $redisStorage)
+    public function __construct(\Nette\DI\Container $context, \Nette\Caching\IStorage $storage)
     {
         $this->context = $context;
-        $this->cache = new \Nette\Caching\Cache($redisStorage);
+        $this->cache = new \Nette\Caching\Cache($storage);
     }
 
     protected function beforeRender() : void
