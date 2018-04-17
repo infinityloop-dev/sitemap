@@ -16,5 +16,5 @@ namespace Nepttune\TI;
 
 interface ISitemap
 {
-    public function getSitemap();
+    public function getSitemap() : array;
 }
