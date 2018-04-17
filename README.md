@@ -17,3 +17,44 @@ This componenet automaticaly generates sitemap from annotated presenter actions.
   - You might also want to change mime type to `application/xml`.
 - Implement `\Nepttune\TI\ISitemap` interface and use `\Nepttune\TI\TSitemap` trait in selected presenters (Those which should have links in sitemap.).
 - Add annotation `@sitemap` to selected actions.
+
+### Example configuration
+
+```
+services:
+    - Nepttune\Component\ISitemapFactory
+```
+
+### Example presenter
+
+```
+class ExamplePresenter implements IPresenter, ISitemap
+{
+    use TSitemap;
+
+    /** @var  \Nepttune\Component\ISitemapFactory */
+    protected $iSitemapFactory;
+    
+    public function __construct(\Nepttune\Component\ISitemapFactory $ISitemapFactory)
+    {
+        $this->iRobotsFactory = $ISitemapFactory;
+    }
+    
+    public function actionSitemap()
+    {
+        $this->getHttpResponse()->setContentType('application/xml');
+    }
+    
+    /**
+     * @sitemap
+     */
+    public function actionExample()
+    {
+    }
+
+    protected function createComponentSitemap()
+    {
+        return $this->iSitemapFactory->create();
+    }
+}
+```
