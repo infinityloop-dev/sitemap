@@ -1,0 +1,21 @@
+{
+  "name": "nepttune/extra-sitemap",
+  "description": "Bonus sitemap generator component",
+  "homepage": "https://www.peldax.com",
+  "type": "library",
+  "license": ["MIT"],
+  "authors": [
+    {
+      "name": "Václav Pelíšek",
+      "homepage": "https://www.peldax.com"
+    }
+  ],
+  "require": {
+    "nepttune/base-components": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nepttune\\": "src/"
+    }
+  }
+}
