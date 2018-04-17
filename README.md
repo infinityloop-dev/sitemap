@@ -37,7 +37,7 @@ class ExamplePresenter implements IPresenter, ISitemap
     
     public function __construct(\Nepttune\Component\ISitemapFactory $ISitemapFactory)
     {
-        $this->iRobotsFactory = $ISitemapFactory;
+        $this->iSitemapFactory = $ISitemapFactory;
     }
     
     public function actionSitemap()
