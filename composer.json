@@ -1,6 +1,6 @@
 {
-  "name": "nepttune/extra-sitemap",
-  "description": "Bonus sitemap generator component",
+  "name": "nepttune/sitemap",
+  "description": "Sitemap generator component",
   "homepage": "https://www.peldax.com",
   "type": "library",
   "license": ["MIT"],
