@@ -24,6 +24,8 @@ final class Sitemap extends BaseComponent
 
     public function __construct(\Nette\DI\Container $context, \Nette\Caching\IStorage $storage)
     {
+        parent::__construct();
+        
         $this->context = $context;
         $this->cache = new \Nette\Caching\Cache($storage);
     }
