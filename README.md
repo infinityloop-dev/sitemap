@@ -1,6 +1,13 @@
 # Sitemap
 :wrench: Sitemap generator component
 
+![Packagist](https://img.shields.io/packagist/dt/nepttune/sitemap.svg)
+![Packagist](https://img.shields.io/packagist/v/nepttune/sitemap.svg)
+[![CommitsSinceTag](https://img.shields.io/github/commits-since/nepttune/sitemap/v1.1.1.svg?maxAge=600)]()
+
+[![Code Climate](https://codeclimate.com/github/nepttune/sitemap/badges/gpa.svg)](https://codeclimate.com/github/nepttune/sitemap)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nepttune/sitemap/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nepttune/sitemap/?branch=master)
+
 ## Introduction
 
 This componenet automaticaly generates sitemap from annotated presenter actions. Found actions are cached to improve performance.
