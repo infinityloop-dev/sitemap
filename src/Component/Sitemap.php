@@ -27,7 +27,7 @@ final class Sitemap extends BaseComponent
         parent::__construct();
         
         $this->context = $context;
-        $this->cache = new \Nette\Caching\Cache($storage);
+        $this->cache = new \Nette\Caching\Cache($storage, 'Nepttune.Sitemap');
     }
 
     protected function beforeRender() : void
