@@ -21,7 +21,7 @@ This componenet automaticaly generates sitemap from annotated presenter actions.
 
 - Register `\Nepttune\Component\ISitemapFactory` as service in cofiguration file, inject it into presenter, write `createComponent` method and use macro `{control}` in template file.
   - Just as any other component.
-  - You might also want to change mime type to `application/xml`.
+  - Content type is automaticaly set to `application/xml`.
 - Implement `\Nepttune\TI\ISitemap` interface and use `\Nepttune\TI\TSitemap` trait in selected presenters (Those which should have links in sitemap.).
 - Add annotation `@sitemap` to selected actions.
 
