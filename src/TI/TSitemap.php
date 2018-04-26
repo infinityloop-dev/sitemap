@@ -25,9 +25,10 @@ trait TSitemap
 
         foreach ($reflection->getMethods(\ReflectionMethod::IS_PUBLIC) as $method)
         {
-            if ($method->class !== $reflection->getName() ||
-                substr($method->name, 0, 6) !== 'action' ||
-                !$method->hasAnnotation('sitemap'))
+            if ($method->isStatic() ||
+                !$method->isPublic() ||
+                !$method->hasAnnotation('sitemap') ||
+                substr($method->name, 0, 6) !== 'action')
             {
                 continue;
             }
