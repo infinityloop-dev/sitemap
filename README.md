@@ -31,6 +31,18 @@ This componenet automaticaly generates sitemap from annotated presenter actions.
 services:
     - Nepttune\Component\ISitemapFactory
 ```
+You can optionaly provide configuration array and enable hreflang links to be included for each entry (Requires translator in presenter).
+```
+parameters:
+    sitemap:
+        hreflang: true
+        
+services:
+    sitemapFactory:
+            implement: Nepttune\Component\ISitemapFactory
+            arguments:
+                - '%sitemap%'
+```
 
 ### Example presenter
 
