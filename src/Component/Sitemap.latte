@@ -14,9 +14,18 @@
     {foreach $pages as $temp}
         <url>
             <loc>{$baseUrl}{plink $temp}</loc>
+            {if $hreflang && isset($presenter->translator)}
+            <xhtml:link rel="alternate" hreflang="{$presenter->translator->getDefaultLocale()}" href="{$baseUrl}{plink $temp}"/>
+            {foreach $presenter->translator->getAvailableLocales() as $locale}
+            {continueIf $locale === $presenter->translator->getDefaultLocale()}
+            <xhtml:link rel="alternate" hreflang="{$locale}" href="{$baseUrl}{plink $temp, locale => $locale}"/>
+            {/foreach}
+            <xhtml:link rel="alternate" hreflang="x-default" href="{$baseUrl}{plink $temp}"/>
+            {/if}
             <lastmod>{$date}</lastmod>
             <changeFreq>daily</changeFreq>
             <priority>1</priority>
         </url>
     {/foreach}
 </urlset>
+
