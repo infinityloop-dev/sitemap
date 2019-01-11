@@ -16,22 +16,31 @@ namespace Nepttune\Component;
 
 final class Sitemap extends BaseComponent
 {
+    private static $defaultConfig = [
+        'hreflang' => false
+    ];
+
+    /** @var array */
+    private $config;
+    
     /** @var \Nette\DI\Container */
     private $context;
 
     /** @var \Nette\Caching\Cache */
     private $cache;
 
-    public function __construct(\Nette\DI\Container $context, \Nette\Caching\IStorage $storage)
+    public function __construct(array $config = [], \Nette\DI\Container $context, \Nette\Caching\IStorage $storage)
     {
         parent::__construct();
-        
+
+        $this->config = \array_merge(self::$defaultConfig, $config);
         $this->context = $context;
         $this->cache = new \Nette\Caching\Cache($storage, 'Nepttune.Sitemap');
     }
 
     protected function beforeRender() : void
     {
+        $this->template->hreflang = $this->config['hreflang'];
         $this->template->pages = $this->cache->call([$this, 'getPages']);
         $this->template->date = new \Nette\Utils\DateTime();
     }
