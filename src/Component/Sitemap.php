@@ -17,7 +17,7 @@ namespace Nepttune\Component;
 final class Sitemap extends BaseComponent
 {
     private static $defaultConfig = [
-        'hreflang' => false
+        'hreflang' => true,
     ];
 
     /** @var array */
