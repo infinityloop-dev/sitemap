@@ -44,6 +44,13 @@ final class Sitemap extends BaseComponent
         $this->template->pages = $this->cache->call([$this, 'getPages']);
         $this->template->date = new \Nette\Utils\DateTime();
     }
+    
+    public function render() : void
+    {
+        $this->beforeRender();
+        $this->template->setFile(__DIR__ . '/Sitemap.latte');
+        $this->template->render();
+    }
 
     public function getPages() : array
     {
