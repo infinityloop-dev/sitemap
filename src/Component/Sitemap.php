@@ -14,7 +14,7 @@ declare(strict_types = 1);
 
 namespace Nepttune\Component;
 
-final class Sitemap extends BaseComponent
+final class Sitemap extends \Nette\Application\UI\Control
 {
     private static $defaultConfig = [
         'hreflang' => true,
