@@ -13,7 +13,7 @@
   "require": {
     "nette/application": "^3.0",
     "nette/di": "^3.0",
-    "nette/caching": "^3.0",
+    "nette/caching": "^3.0"
   },
   "autoload": {
     "psr-4": {
