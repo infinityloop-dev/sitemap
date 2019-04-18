@@ -11,7 +11,7 @@
     }
   ],
   "require": {
-    "nepttune/base-component": "^4.0"
+    "nette/application": "^3.0"
   },
   "autoload": {
     "psr-4": {
