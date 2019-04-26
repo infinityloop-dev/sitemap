@@ -31,8 +31,6 @@ final class Sitemap extends \Nette\Application\UI\Control
 
     public function __construct(array $config = [], \Nette\DI\Container $context, \Nette\Caching\IStorage $storage)
     {
-        parent::__construct();
-
         $this->config = \array_merge(self::$defaultConfig, $config);
         $this->context = $context;
         $this->cache = new \Nette\Caching\Cache($storage, 'Nepttune.Sitemap');
