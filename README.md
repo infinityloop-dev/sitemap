@@ -14,8 +14,9 @@ This componenet automaticaly generates sitemap from annotated presenter actions.
 
 ## Dependencies
 
-- [nepttune/base-requirements](https://github.com/nepttune/base-requirements)
-- [nepttune/base-component](https://github.com/nepttune/base-component)
+- [nette/application](https://github.com/nette/application)
+- [nette/di](https://github.com/nette/di)
+- [nette/caching](https://github.com/nette/caching)
 
 ## How to use
 
