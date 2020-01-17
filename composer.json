@@ -1,7 +1,7 @@
 {
   "name": "nepttune/sitemap",
-  "description": "Sitemap generator component",
-  "homepage": "https://www.peldax.com",
+  "description": "Component for Nette framework which renders as xml sitemap.",
+  "homepage": "https://www.infinityloop.dev",
   "type": "library",
   "license": ["MIT"],
   "authors": [
