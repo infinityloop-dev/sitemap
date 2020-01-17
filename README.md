@@ -12,6 +12,14 @@
 
 This componenet automaticaly generates sitemap from annotated presenter actions. Found actions are cached to improve performance.
 
+## Installation
+
+Install package using composer
+
+```
+composer require nepttune/sitemap
+```
+
 ## Dependencies
 
 - [nette/application](https://github.com/nette/application)
